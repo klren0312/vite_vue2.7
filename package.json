@@ -1,0 +1,19 @@
+{
+  "name": "vite_vue27",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^2.7.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.8.2",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "terser": "^5.14.1",
+    "vite": "^2.9.9"
+  }
+}
