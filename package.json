@@ -9,6 +9,7 @@
     "lint": "eslint --fix"
   },
   "dependencies": {
+    "element-ui": "^2.15.9",
     "pinia": "^2.0.14",
     "vue": "^2.7.0",
     "vue-router": "^3.5.4"
