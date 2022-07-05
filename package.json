@@ -1,19 +1,31 @@
 {
   "name": "vite_vue27",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --fix"
   },
   "dependencies": {
-    "vue": "^2.7.0"
+    "pinia": "^2.0.14",
+    "vue": "^2.7.0",
+    "vue-router": "^3.5.4"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-vue2": "^1.1.2",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.1.1",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
     "terser": "^5.14.1",
-    "vite": "^2.9.9"
+    "vite": "^2.9.9",
+    "vue-eslint-parser": "^9.0.3"
   }
 }
