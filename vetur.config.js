@@ -1,4 +1,5 @@
 // vetur.config.js
+// https://github.com/vuejs/vetur/issues/2296#issuecomment-1155957974
 module.exports = {
   settings: {
     'vetur.completion.autoImport': false,
