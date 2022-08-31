@@ -1,11 +1,7 @@
 <template>
-  <div>
-    <div>
-      <router-link to="/mainPage">Page1</router-link>
-      <router-link to="/contentPage">Page2</router-link>
-    </div>
-    <router-view></router-view>
-  </div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
-<script setup></script>
-<style></style>
+<script setup lang="ts">
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+<style scoped></style>

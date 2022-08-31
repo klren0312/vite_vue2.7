@@ -6,12 +6,12 @@ export const useAppStore = defineStore({
     isOk: true,
   }),
   getters: {
-    getIsOk() {
+    getIsOk(): boolean {
       return this.isOk
     },
   },
   actions: {
-    setIsOk(isOk) {
+    setIsOk(isOk: boolean) {
       this.isOk = isOk
     },
   },

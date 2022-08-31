@@ -6,7 +6,7 @@
     </el-table>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
 const tableData = [
   {
     id: 0,
@@ -14,4 +14,4 @@ const tableData = [
   },
 ]
 </script>
-<style lang=""></style>
+<style lang="scss"></style>
