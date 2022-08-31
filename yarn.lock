@@ -1206,19 +1206,6 @@ systemjs@^6.12.1:
   resolved "https://mirrors.cloud.tencent.com/npm/systemjs/-/systemjs-6.12.1.tgz#47cdd23a6ec9f1b01cf5b5f70562c8550da229d3"
   integrity sha512-hqTN6kW+pN6/qro6G9OZ7ceDQOcYno020zBQKpZQLsJhYTDMCMNfXi/Y8duF5iW+4WWZr42ry0MMkcRGpbwG2A==
 
-<<<<<<< HEAD
-=======
-terser@^5.15.0:
-  version "5.15.0"
-  resolved "https://mirrors.cloud.tencent.com/npm/terser/-/terser-5.15.0.tgz#e16967894eeba6e1091509ec83f0c60e179f2425"
-  integrity sha512-L1BJiXVmheAQQy+as0oF3Pwtlo4s3Wi1X2zNZ2NxOB4wx9bdS9Vk67XQENLFdLYGCK/Z2di53mTj/hBafR+dTA==
-  dependencies:
-    "@jridgewell/source-map" "^0.3.2"
-    acorn "^8.5.0"
-    commander "^2.20.0"
-    source-map-support "~0.5.20"
-
->>>>>>> 94666d470cc662700d6182575c4661e23e8ee98f
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://mirrors.cloud.tencent.com/npm/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
