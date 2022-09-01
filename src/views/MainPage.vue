@@ -1,15 +1,17 @@
 <template>
   <div>
-    <HelloWorld msg="Hello Vue27 + Vite" />
+    isOk: {{ store.isOk }} - testNum: {{ testNum }}
+    <el-button type="primary" @click="changeStore">changeStore</el-button>
   </div>
 </template>
 <script setup lang="ts">
-import HelloWorld from '/@/components/HelloWorld.vue'
-import { provide, reactive } from 'vue'
-const testData = reactive({
-  test: 12345,
-  name: 'test',
-})
-provide('testData', testData)
+import useCounterStore from '/@/store/modules/app'
+import { storeToRefs } from 'pinia'
+const store = useCounterStore()
+const { testNum } = storeToRefs(store)
+const changeStore = () => {
+  store.setIsOk(!store.isOk)
+  testNum.value++
+}
 </script>
 <style></style>

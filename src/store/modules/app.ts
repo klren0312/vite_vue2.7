@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia'
 
-export const useAppStore = defineStore({
+const useAppStore = defineStore({
   id: 'app',
   state: () => ({
     isOk: true,
+    testNum: 1,
   }),
   getters: {
     getIsOk(): boolean {
@@ -16,3 +17,5 @@ export const useAppStore = defineStore({
     },
   },
 })
+
+export default useAppStore
