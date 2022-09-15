@@ -10,6 +10,7 @@
     "lint": "eslint --fix"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "element-ui": "^2.15.9",
     "pinia": "^2.0.21",
     "vue": "^2.7.10",
