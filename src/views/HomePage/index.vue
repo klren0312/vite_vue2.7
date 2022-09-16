@@ -41,7 +41,4 @@ const tableData = [
   },
 ]
 </script>
-<style lang="scss" scoped>
-.home-page {
-}
-</style>
+<style lang="scss" scoped></style>
