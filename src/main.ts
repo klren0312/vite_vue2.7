@@ -5,7 +5,7 @@ import router from './router'
 
 Vue.use(PiniaVuePlugin)
 const pinia = createPinia()
-
+Vue.prototype.$ELEMENT = { size: 'mini', zIndex: 3000 }
 new Vue({
   render: (h) => h(App),
   pinia,

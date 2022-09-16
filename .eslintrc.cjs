@@ -38,6 +38,12 @@ module.exports = {
         varsIgnorePattern: '^_',
       },
     ],
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['index'], //需要忽略的组件名
+      },
+    ],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'prettier/prettier': [

@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <hello-world></hello-world>
-    <div>
-      <router-link to="/">页面一</router-link>
-      <router-link to="/contentPage">页面二</router-link>
-    </div>
+  <div class="app">
     <router-view></router-view>
   </div>
 </template>
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-<style scoped></style>
+<script setup lang="ts"></script>
+<style lang="scss">
+html,
+body {
+  margin: 0;
+  color: #323232;
+}
+</style>

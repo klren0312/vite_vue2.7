@@ -24,7 +24,10 @@
     "removeComments": true,
     "paths": {
       "/@/*": ["src/*"]
-    }
+    },
+  },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
   },
   "include": [
     "tests/**/*.ts",

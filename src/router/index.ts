@@ -1,32 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import Layout from '/@/views/Layout/index.vue'
 Vue.use(VueRouter)
 
 export const constantRoutes = [
   {
     path: '/',
-    redirect: '/mainPage',
-  },
-  {
-    path: '/mainPage',
     name: 'MainPage',
-    hidden: true,
     meta: {
-      name: '页面一',
+      icon: 'el-icon-setting',
+      title: '首页',
     },
-    component: () =>
-      import(/* webpackChunkName: "MainPage" */ '/@/views/MainPage.vue'),
-  },
-  {
-    path: '/contentPage',
-    name: 'ContentPage',
-    hidden: true,
-    meta: {
-      name: '页面二',
-    },
-    component: () =>
-      import(/* webpackChunkName: "ContentPage" */ '/@/views/ContentPage.vue'),
+    component: Layout,
+    redirect: '/homePage',
+    children: [
+      {
+        path: '/homePage',
+        name: 'HomePage',
+        meta: {
+          title: '首页',
+        },
+        component: () =>
+          import(
+            /* webpackChunkName: "HomePage" */ '/@/views/HomePage/index.vue'
+          ),
+      },
+    ],
   },
 ]
 
@@ -36,5 +35,13 @@ const createRouter = () =>
   })
 
 const router = createRouter()
+
+export function useRouter() {
+  return router
+}
+
+export function useRoute() {
+  return router.currentRoute
+}
 
 export default router

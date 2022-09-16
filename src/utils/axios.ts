@@ -1,6 +1,6 @@
 import axios, { ResponseType } from 'axios'
 import { NoticeType } from 'types/axios'
-import { Notification } from 'element-ui'
+import Notification from 'element-ui/lib/notification'
 
 const instance = axios.create({
   timeout: 30000,
