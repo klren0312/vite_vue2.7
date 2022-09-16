@@ -38,7 +38,12 @@ instance.interceptors.response.use(
   }
 )
 
-export const get = (url: string, params: any, notice: NoticeType, responseType: ResponseType): Promise<any> => {
+export const get = (
+  url: string,
+  params: any,
+  notice: NoticeType,
+  responseType: ResponseType
+): Promise<any> => {
   if (params) {
     params.ticket = sessionStorage.getItem('RiskManageTicket')
   } else {
@@ -69,7 +74,7 @@ export const get = (url: string, params: any, notice: NoticeType, responseType: 
           }
           Notification.warning({
             title: notice.title,
-            message: message
+            message: message,
           })
         }
         reject(err)
@@ -77,7 +82,11 @@ export const get = (url: string, params: any, notice: NoticeType, responseType: 
   })
 }
 
-export const post = (url: string, params: any, notice: NoticeType): Promise<any> => {
+export const post = (
+  url: string,
+  params: any,
+  notice: NoticeType
+): Promise<any> => {
   return new Promise((resolve, reject) => {
     instance({
       url,
