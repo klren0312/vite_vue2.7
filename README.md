@@ -50,7 +50,19 @@ module.exports = {
 vite创建vue项目后, 把插件替换下就行了
 
 ### 3. vue-router安装
-vue2应该只支持vue-router3版本
+>vue2只支持vue-router3版本
+
+若需要在页面中使用$route和$router, 可以在路由文件中新增两个方法
+
+```js
+export function useRouter() {
+  return router
+}
+
+export function useRoute() {
+  return router.currentRoute
+}
+```
 
 ### 4. pinia安装
 > 按官方文档引入即可: https://pinia.vuejs.org/getting-started.html#installation
