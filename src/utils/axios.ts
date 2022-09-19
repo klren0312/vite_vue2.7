@@ -44,13 +44,6 @@ export const get = (
   notice: NoticeType,
   responseType: ResponseType
 ): Promise<any> => {
-  if (params) {
-    params.ticket = sessionStorage.getItem('RiskManageTicket')
-  } else {
-    params = {
-      ticket: sessionStorage.getItem('RiskManageTicket'),
-    }
-  }
   return new Promise((resolve, reject) => {
     instance({
       url,

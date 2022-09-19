@@ -12,33 +12,23 @@
 <script setup lang="ts">
 import useCounterStore from '/@/store/modules/app'
 import { storeToRefs } from 'pinia'
+import { GetDataApi } from '/@/apis/data.api'
+import { onMounted, ref } from 'vue'
 const store = useCounterStore()
 const { testNum } = storeToRefs(store)
 const changeStore = () => {
   store.setIsOk(!store.isOk)
   testNum.value++
 }
-const tableData = [
-  {
-    date: '2016-05-02',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1518 弄',
-  },
-  {
-    date: '2016-05-04',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1517 弄',
-  },
-  {
-    date: '2016-05-01',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1519 弄',
-  },
-  {
-    date: '2016-05-03',
-    name: '王小虎',
-    address: '上海市普陀区金沙江路 1516 弄',
-  },
-]
+let tableData = ref([])
+const getTableData = () => {
+  GetDataApi().then((res) => {
+    tableData.value = res.data
+  })
+}
+
+onMounted(() => {
+  getTableData()
+})
 </script>
 <style lang="scss" scoped></style>
