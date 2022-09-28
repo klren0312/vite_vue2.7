@@ -12,7 +12,7 @@ export const constantRoutes = [
       title: '首页',
     },
     component: Layout,
-    redirect: '/homePage',
+    redirect: '/TestVbind',
     children: [
       {
         path: '/homePage',
@@ -23,6 +23,17 @@ export const constantRoutes = [
         component: () =>
           import(
             /* webpackChunkName: "HomePage" */ '/@/views/HomePage/index.vue'
+          ),
+      },
+      {
+        path: '/TestVbind',
+        name: 'TestVbind',
+        meta: {
+          title: '测试v-bind',
+        },
+        component: () =>
+          import(
+            /* webpackChunkName: "TestVbind" */ '/@/views/TestVbind/index.vue'
           ),
       },
     ],
