@@ -6,7 +6,6 @@ import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import { viteMockServe } from 'vite-plugin-mock'
 import path from 'path'
 
-const prodMock = true
 export default ({ command }: ConfigEnv): UserConfigExport => {
   return {
     server: {
@@ -18,7 +17,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       viteMockServe({
         mockPath: 'mock',
         localEnabled: command === 'serve',
-        prodEnabled: command !== 'serve' && prodMock,
+        prodEnabled: command !== 'serve',
         injectCode: `
           import { setupProdMockServer } from './mockProdServer';
           setupProdMockServer();
