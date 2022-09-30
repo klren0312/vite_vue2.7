@@ -4,6 +4,7 @@
       :default-active="onRoutes"
       background-color="#545c64"
       text-color="#fff"
+      router
       active-text-color="#ffd04b"
     >
       <template v-for="main in constantRoutes">
