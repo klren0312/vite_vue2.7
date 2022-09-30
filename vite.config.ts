@@ -17,7 +17,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       viteMockServe({
         mockPath: 'mock',
         localEnabled: command === 'serve',
-        prodEnabled: command !== 'serve',
+        prodEnabled: false,
         injectCode: `
           import { setupProdMockServer } from './mockProdServer';
           setupProdMockServer();

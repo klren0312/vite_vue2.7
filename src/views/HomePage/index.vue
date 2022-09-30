@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    isOk: {{ store.isOk }} - testNum: {{ testNum }}
+    <div class="test-text">isOk: {{ store.isOk }} - testNum: {{ testNum }}</div>
     <el-button type="primary" @click="changeStore">changeStore</el-button>
     <el-table :data="tableData" style="width: 100%">
       <el-table-column prop="date" label="日期" width="180"> </el-table-column>
@@ -16,6 +16,7 @@ import { GetDataApi } from '/@/apis/data.api'
 import { onMounted, ref } from 'vue'
 const store = useCounterStore()
 const { testNum } = storeToRefs(store)
+const textColor = ref('#ff0000')
 const changeStore = () => {
   store.setIsOk(!store.isOk)
   testNum.value++
@@ -31,4 +32,10 @@ onMounted(() => {
   getTableData()
 })
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.home-page {
+  .test-text {
+    color: v-bind(textColor);
+  }
+}
+</style>
