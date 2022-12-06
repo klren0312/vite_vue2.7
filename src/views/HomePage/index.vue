@@ -7,13 +7,18 @@
       <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
       <el-table-column prop="address" label="地址"> </el-table-column>
     </el-table>
+    <el-button type="primary" size="default" @click="push"> inject </el-button>
   </div>
 </template>
 <script setup lang="ts">
 import useCounterStore from '/@/store/modules/app'
 import { storeToRefs } from 'pinia'
 import { GetDataApi } from '/@/apis/data.api'
-import { onMounted, ref } from 'vue'
+import { inject, onMounted, ref } from 'vue'
+
+const injectEvent: any = inject('test')
+const push = () => injectEvent('子传值')
+
 const store = useCounterStore()
 const { testNum } = storeToRefs(store)
 const textColor = ref('#ff0000')

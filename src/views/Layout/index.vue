@@ -12,6 +12,12 @@
 <script setup lang="ts">
 import HeaderTop from '/@/views/Layout/HeaderTop.vue'
 import SideBar from '/@/views/Layout/SideBar.vue'
+import { provide } from 'vue'
+
+const setTest = (v) => {
+  alert(v)
+}
+provide('test', setTest)
 </script>
 <style lang="scss" scoped>
 .page-layout {

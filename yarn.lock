@@ -277,10 +277,10 @@
     regenerator-runtime "^0.13.9"
     systemjs "^6.12.4"
 
-"@vitejs/plugin-vue2@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.npmmirror.com/@vitejs/plugin-vue2/-/plugin-vue2-1.1.2.tgz#891f0acc5a6a2b4886a74cb8d6359d42f19f968a"
-  integrity sha512-y6OEA+2UdJ0xrEQHodq20v9r3SpS62IOHrgN92JPLvVpNkhcissu7yvD5PXMzMESyazj0XNWGsc8UQk8+mVrjQ==
+"@vitejs/plugin-vue2@^2.1.0":
+  version "2.1.0"
+  resolved "https://repo.huaweicloud.com/repository/npm/@vitejs/plugin-vue2/-/plugin-vue2-2.1.0.tgz#a84abd69c3baff0992eb2dd399926dd2490baaea"
+  integrity sha512-9glD5jLWRjdj+SpH7cQo+n/kZlZBaTjQwTe3aUxsWr9uU7aOnlhG319ywJT5175mHWIyNz8g5QG6NPdgKwwYDA==
 
 "@volar/code-gen@0.39.5":
   version "0.39.5"
