@@ -22,7 +22,7 @@ export const constantRoutes = [
         },
         component: () =>
           import(
-            /* webpackChunkName: "HomePage" */ '/@/views/HomePage/index.vue'
+            /* webpackChunkName: "HomePage" */ '../views/HomePage/HomePage.vue'
           ),
       },
     ],
