@@ -25,6 +25,17 @@ export const constantRoutes = [
             /* webpackChunkName: "HomePage" */ '../views/HomePage/HomePage.vue'
           ),
       },
+      {
+        path: '/testPage',
+        name: 'TestPage',
+        meta: {
+          title: '测试页',
+        },
+        component: () =>
+          import(
+            /* webpackChunkName: "TestPage" */ '../views/TestPage/TestPage.vue'
+          ),
+      },
     ],
   },
 ]
@@ -35,13 +46,5 @@ const createRouter = () =>
   })
 
 const router = createRouter()
-
-export function useRouter() {
-  return router
-}
-
-export function useRoute() {
-  return router.currentRoute
-}
 
 export default router

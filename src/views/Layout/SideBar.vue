@@ -37,7 +37,8 @@
 </template>
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useRoute, constantRoutes } from '/@/router'
+import { useRoute } from 'vue-router/composables'
+import { constantRoutes } from '/@/router'
 
 const onRoutes = computed(() => {
   return useRoute().path

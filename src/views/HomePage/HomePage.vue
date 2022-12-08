@@ -8,6 +8,7 @@
       <el-table-column prop="address" label="地址"> </el-table-column>
     </el-table>
     <el-button type="primary" size="default" @click="push"> inject </el-button>
+    <el-button @click="toTestPage">to testPage</el-button>
   </div>
 </template>
 <script setup lang="ts">
@@ -17,6 +18,8 @@ import { GetDataApi } from '/@/apis/data.api'
 import { inject, onMounted, ref } from 'vue'
 import Message from 'element-ui/lib/message'
 import 'element-ui/lib/theme-chalk/message.css'
+import { useRouter } from 'vue-router/composables'
+const $router = useRouter()
 
 const injectEvent: any = inject('test')
 const push = () => injectEvent('子传值')
@@ -36,6 +39,15 @@ const getTableData = () => {
   GetDataApi().then((res) => {
     tableData.value = res.data
     tableLoading.value = false
+  })
+}
+
+const toTestPage = () => {
+  $router.push({
+    name: 'TestPage',
+    query: {
+      data: 'aaa',
+    },
   })
 }
 
