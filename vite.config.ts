@@ -25,7 +25,8 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       }),
       splitVendorChunkPlugin(),
       legacy({
-        targets: ['defaults', 'not ie < 9'],
+        targets: ['defaults', 'ie >= 11'],
+        additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       }),
       Components({
         resolvers: [ElementUiResolver()],
