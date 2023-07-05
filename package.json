@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "echarts": "^5.4.2",
     "element-ui": "^2.15.9",
     "pinia": "^2.0.21",
     "vue": "^2.7.10",
+    "vue-echarts": "^6.6.0",
     "vue-router": "^3.6.4"
   },
   "devDependencies": {
