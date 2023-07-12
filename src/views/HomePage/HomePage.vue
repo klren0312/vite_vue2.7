@@ -15,7 +15,7 @@
 import useCounterStore from '/@/store/modules/app'
 import { storeToRefs } from 'pinia'
 import { GetDataApi } from '/@/apis/data.api'
-import { inject, onMounted, ref } from 'vue'
+import { inject, onMounted, onUnmounted, ref } from 'vue'
 import Message from 'element-ui/lib/message'
 import 'element-ui/lib/theme-chalk/message.css'
 import { useRouter } from 'vue-router/composables'
@@ -27,6 +27,15 @@ const push = () => injectEvent('子传值')
 const store = useCounterStore()
 const { testNum } = storeToRefs(store)
 const textColor = ref('#ff0000')
+
+onMounted(() => {
+  console.log('onMounted')
+})
+
+onUnmounted(() => {
+  console.log('onUnmounted')
+})
+
 const changeStore = () => {
   Message.success('更改成功')
   store.setIsOk(!store.isOk)
