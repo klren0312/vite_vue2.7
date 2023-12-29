@@ -19,6 +19,7 @@ import { inject, onMounted, onUnmounted, ref } from 'vue'
 import Message from 'element-ui/lib/message'
 import 'element-ui/lib/theme-chalk/message.css'
 import { useRouter } from 'vue-router/composables'
+import { Data } from '/@/apis/models/data.model'
 const $router = useRouter()
 
 const injectEvent: any = inject('test')
@@ -27,6 +28,8 @@ const push = () => injectEvent('子传值')
 const store = useCounterStore()
 const { testNum } = storeToRefs(store)
 const textColor = ref('#ff0000')
+const tableData = ref<Data[]>([])
+const tableLoading = ref(false)
 
 onMounted(() => {
   console.log('onMounted')
@@ -41,8 +44,7 @@ const changeStore = () => {
   store.setIsOk(!store.isOk)
   testNum.value++
 }
-let tableData = ref([])
-const tableLoading = ref(false)
+
 const getTableData = () => {
   tableLoading.value = true
   GetDataApi().then((res) => {

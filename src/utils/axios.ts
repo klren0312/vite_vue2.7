@@ -1,6 +1,11 @@
 import axios, { ResponseType } from 'axios'
 import { NoticeType } from 'types/axios'
 import Notification from 'element-ui/lib/notification'
+interface ResponseBody<T> {
+  code: number
+  message: string
+  data: T
+}
 
 const instance = axios.create({
   timeout: 30000,
@@ -38,12 +43,12 @@ instance.interceptors.response.use(
   }
 )
 
-export const get = (
+export const get = <T = any>(
   url: string,
-  params: any,
-  notice: NoticeType,
-  responseType: ResponseType
-): Promise<any> => {
+  params?: any,
+  notice?: NoticeType,
+  responseType?: ResponseType
+): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
       url,
@@ -75,11 +80,11 @@ export const get = (
   })
 }
 
-export const post = (
+export const post = <T = any>(
   url: string,
   params: any,
   notice: NoticeType
-): Promise<any> => {
+): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
       url,
@@ -110,7 +115,10 @@ export const post = (
   })
 }
 
-export const getDownload = (url: string, params: any): Promise<any> => {
+export const getDownload = <T = any>(
+  url: string,
+  params: any
+): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
       url: url,
@@ -124,8 +132,8 @@ export const getDownload = (url: string, params: any): Promise<any> => {
           if (data.size === 0) {
             resolve({
               code: -1,
-              msg: '暂无文件',
-              data: '',
+              message: '暂无文件',
+              data,
             })
           }
           const r = new FileReader()
@@ -137,7 +145,7 @@ export const getDownload = (url: string, params: any): Promise<any> => {
               // 如果执行到这里，说明下载报错了，进行后续处理
               resolve({
                 code: -1,
-                msg: '暂无文件',
+                message: '暂无文件',
                 data: resData,
               })
             } catch (err) {
@@ -156,20 +164,21 @@ export const getDownload = (url: string, params: any): Promise<any> => {
                 } catch (e) {
                   resolve({
                     code: -1,
-                    msg: '暂无文件',
-                    data: '',
+                    message: '暂无文件',
+                    data,
                   })
                 }
                 return
               }
               const url = window.URL.createObjectURL(data)
+              const resData: any = {
+                url,
+                fileName,
+              }
               resolve({
                 code: 200,
-                msg: '获取成功',
-                data: {
-                  url,
-                  fileName,
-                },
+                message: '获取成功',
+                data: resData,
               })
             }
           }

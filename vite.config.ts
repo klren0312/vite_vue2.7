@@ -26,6 +26,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       splitVendorChunkPlugin(),
       legacy({
         targets: ['defaults', 'ie >= 11'],
+        modernPolyfills: true,
         additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       }),
       Components({
@@ -33,7 +34,6 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       }),
     ],
     build: {
-      target: 'es2015',
       chunkSizeWarningLimit: 2000,
       rollupOptions: {
         output: {

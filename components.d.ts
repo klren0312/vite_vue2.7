@@ -12,7 +12,6 @@ declare module 'vue' {
     ElSubmenu: typeof import('element-ui/lib/submenu')['default']
     ElTable: typeof import('element-ui/lib/table')['default']
     ElTableColumn: typeof import('element-ui/lib/table-column')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheChart: typeof import('./src/components/TheChart.vue')['default']
