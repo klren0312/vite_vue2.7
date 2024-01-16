@@ -20,14 +20,12 @@
     "lib": ["dom", "esnext"],
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "types": ["vite/client"],
+    "typeRoots": ["./node_modules/@types/", "./types", "./node_modules"],
+    "types": ["vite/client", "node"],
     "removeComments": true,
     "paths": {
       "/@/*": ["src/*"]
     },
-  },
-  "vueCompilerOptions": {
-    "experimentalCompatMode": 2
   },
   "include": [
     "tests/**/*.ts",
