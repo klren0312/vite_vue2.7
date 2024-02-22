@@ -135,8 +135,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'element-ui': ['element-ui'],
+        manualChunks(id) {
+          if (id.includes('element-ui')) {
+            return 'element-ui'
+          }
         },
       },
     },
