@@ -10,32 +10,32 @@
   </div>
 </template>
 <script setup lang="ts">
-import HeaderTop from '/@/views/Layout/HeaderTop.vue'
-import SideBar from '/@/views/Layout/SideBar.vue'
-import { provide } from 'vue'
+  import HeaderTop from '/@/views/Layout/HeaderTop.vue'
+  import SideBar from '/@/views/Layout/SideBar.vue'
+  import { provide } from 'vue'
 
-const setTest = (v) => {
-  alert(v)
-}
-provide('test', setTest)
+  const setTest = (v) => {
+    alert(v)
+  }
+  provide('test', setTest)
 </script>
 <style lang="scss" scoped>
-.page-layout {
-  height: 100vh;
-}
-.container {
-  height: calc(100% - 50px);
-  display: flex;
-  background: #e9e9e9;
-  .left {
-    width: 240px;
+  .page-layout {
+    height: 100vh;
   }
-  .content {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    background: #fff;
-    box-sizing: border-box;
+  .container {
+    height: calc(100% - 50px);
+    display: flex;
+    background: #e9e9e9;
+    .left {
+      width: 240px;
+    }
+    .content {
+      flex: 1;
+      margin: 10px;
+      padding: 20px;
+      background: #fff;
+      box-sizing: border-box;
+    }
   }
-}
 </style>

@@ -18,7 +18,7 @@ instance.interceptors.request.use(
   },
   (err) => {
     return Promise.reject(err)
-  }
+  },
 )
 
 // response拦截器
@@ -40,14 +40,14 @@ instance.interceptors.response.use(
     } else {
       return Promise.reject(err)
     }
-  }
+  },
 )
 
 export const get = <T = any>(
   url: string,
   params?: any,
   notice?: NoticeType,
-  responseType?: ResponseType
+  responseType?: ResponseType,
 ): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
@@ -83,7 +83,7 @@ export const get = <T = any>(
 export const post = <T = any>(
   url: string,
   params: any,
-  notice: NoticeType
+  notice: NoticeType,
 ): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
@@ -115,10 +115,7 @@ export const post = <T = any>(
   })
 }
 
-export const getDownload = <T = any>(
-  url: string,
-  params: any
-): Promise<ResponseBody<T>> => {
+export const getDownload = <T = any>(url: string, params: any): Promise<ResponseBody<T>> => {
   return new Promise((resolve, reject) => {
     instance({
       url: url,

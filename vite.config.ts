@@ -37,8 +37,10 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       chunkSizeWarningLimit: 2000,
       rollupOptions: {
         output: {
-          manualChunks: {
-            'element-ui': ['element-ui'],
+          manualChunks(id) {
+            if (id.includes('element-ui')) {
+              return 'element-ui'
+            }
           },
         },
       },

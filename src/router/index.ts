@@ -21,9 +21,7 @@ export const constantRoutes = [
           title: '首页',
         },
         component: () =>
-          import(
-            /* webpackChunkName: "HomePage" */ '../views/HomePage/HomePage.vue'
-          ),
+          import(/* webpackChunkName: "HomePage" */ '../views/HomePage/HomePage.vue'),
       },
       {
         path: '/testPage',
@@ -32,9 +30,7 @@ export const constantRoutes = [
           title: '测试页',
         },
         component: () =>
-          import(
-            /* webpackChunkName: "TestPage" */ '../views/TestPage/TestPage.vue'
-          ),
+          import(/* webpackChunkName: "TestPage" */ '../views/TestPage/TestPage.vue'),
       },
     ],
   },

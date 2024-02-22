@@ -22,11 +22,7 @@
             <span>{{ main.meta.title }}</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item
-              v-for="sub in main.children"
-              :index="sub.path"
-              :key="sub.path"
-            >
+            <el-menu-item v-for="sub in main.children" :index="sub.path" :key="sub.path">
               {{ sub.meta.title }}
             </el-menu-item>
           </el-menu-item-group>
@@ -36,18 +32,18 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { useRoute } from 'vue-router/composables'
-import { constantRoutes } from '/@/router'
+  import { computed } from 'vue'
+  import { useRoute } from 'vue-router/composables'
+  import { constantRoutes } from '/@/router'
 
-const onRoutes = computed(() => {
-  return useRoute().path
-})
+  const onRoutes = computed(() => {
+    return useRoute().path
+  })
 </script>
 <style lang="scss">
-.side-bar {
-  .el-menu {
-    height: 100%;
+  .side-bar {
+    .el-menu {
+      height: 100%;
+    }
   }
-}
 </style>
