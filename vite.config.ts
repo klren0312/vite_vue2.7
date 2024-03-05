@@ -8,6 +8,7 @@ import path from 'path'
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
   return {
+    base: '/vite_vue2.7',
     server: {
       host: true,
       port: 28847,
@@ -35,15 +36,6 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
     ],
     build: {
       chunkSizeWarningLimit: 2000,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('element-ui')) {
-              return 'element-ui'
-            }
-          },
-        },
-      },
     },
     resolve: {
       alias: [
