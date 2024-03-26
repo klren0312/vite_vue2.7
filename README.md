@@ -3,6 +3,9 @@
 > 示例代码: https://github.com/klren0312/vite_vue2.7
 > 示例页面: https://klren0312.github.io/vite_vue2.7/
 
+## 由JetBrains提供开发工具支持
+<a href ="https://www.jetbrains.com/community/opensource/?"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg"></a>
+
 ## 用到的vite插件
 
  - @vitejs/plugin-vue2 vite的vue2.7插件
