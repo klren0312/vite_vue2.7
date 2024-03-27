@@ -36,6 +36,14 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
     ],
     build: {
       chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'element-ui': ['element-ui'],
+            echarts: ['echarts', 'vue-echarts'],
+          },
+        },
+      },
     },
     resolve: {
       alias: [

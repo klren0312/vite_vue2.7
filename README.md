@@ -127,7 +127,7 @@ export default defineConfig({
 ```
 
 ### 7. 分离打包
-> 参考资料: https://cn.vitejs.dev/guide/build.html#chunking-strategy
+> 参考资料: https://rollupjs.org/configuration-options/#output-manualchunks
 
 ```js
 import { splitVendorChunkPlugin } from 'vite'
@@ -138,10 +138,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes('element-ui')) {
-            return 'element-ui'
-          }
+        manualChunks: {
+          'element-ui': ['element-ui'],
+          echarts: ['echarts', 'vue-echarts'],
         },
       },
     },
