@@ -32,18 +32,20 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { computed } from 'vue'
-  import { useRoute } from 'vue-router/composables'
-  import { constantRoutes } from '/@/router'
-
-  const onRoutes = computed(() => {
-    return useRoute().path
-  })
+import { computed } from 'vue'
+import { useRoute } from 'vue-router/composables'
+import { constantRoutes } from '/@/router'
+defineOptions({
+  name: 'SideBar',
+})
+const onRoutes = computed(() => {
+  return useRoute().path
+})
 </script>
 <style lang="scss">
-  .side-bar {
-    .el-menu {
-      height: 100%;
-    }
+.side-bar {
+  .el-menu {
+    height: 100%;
   }
+}
 </style>

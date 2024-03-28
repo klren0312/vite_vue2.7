@@ -3,11 +3,11 @@
   "semi": false,
   "tabWidth": 2,
   "useTabs": false,
-  "vueIndentScriptAndStyle": true,
+  "vueIndentScriptAndStyle": false,
   "singleQuote": true,
   "trailingComma": "all",
   "proseWrap": "never",
-  "htmlWhitespaceSensitivity": "strict",
+  "htmlWhitespaceSensitivity": "ignore",
   "endOfLine": "auto",
   "overrides": [
     {

@@ -21,7 +21,7 @@
     "noImplicitAny": false,
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types/", "./types", "./node_modules"],
-    "types": ["vite/client", "node"],
+    "types": ["vite/client", "node", "unplugin-vue-define-options/macros-global"],
     "removeComments": true,
     "paths": {
       "/@/*": ["src/*"]

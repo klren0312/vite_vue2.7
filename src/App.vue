@@ -3,11 +3,15 @@
     <router-view></router-view>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOptions({
+  name: 'App',
+})
+</script>
 <style lang="scss">
-  html,
-  body {
-    margin: 0;
-    color: #323232;
-  }
+html,
+body {
+  margin: 0;
+  color: #323232;
+}
 </style>

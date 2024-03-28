@@ -4,6 +4,7 @@ import legacy from '@vitejs/plugin-legacy'
 import Components from 'unplugin-vue-components/vite'
 import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import { viteMockServe } from 'vite-plugin-mock'
+import DefineOptions from 'unplugin-vue-define-options/vite'
 import path from 'path'
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
@@ -15,6 +16,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
     },
     plugins: [
       vue(),
+      DefineOptions(),
       viteMockServe({
         mockPath: 'mock',
         localEnabled: command === 'serve',
