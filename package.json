@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint --fix --ext .ts,.vue src"
+    "lint-fix": "eslint --fix --ext .ts,.vue src",
+    "lint": "eslint",
+    "prepare": "husky"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -29,6 +31,8 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.20.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "mockjs": "^1.1.0",
     "postcss": "^8.4.33",
     "prettier": "^2.8.8",
@@ -40,5 +44,10 @@
     "vite-plugin-mock": "^2.9.8",
     "vue-eslint-parser": "^9.4.0",
     "vue-tsc": "^0.39.5"
+  },
+  "lint-staged": {
+    "*.{vue,ts,tsx}": [
+      "eslint --ext .ts,.vue src"
+    ]
   }
 }
