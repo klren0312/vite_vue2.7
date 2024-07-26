@@ -6,6 +6,7 @@ import { ElementUiResolver } from 'unplugin-vue-components/resolvers'
 import { viteMockServe } from 'vite-plugin-mock'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import path from 'path'
+import VueMacros from 'unplugin-vue-macros/vite'
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
   return {
@@ -15,7 +16,11 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       port: 28847,
     },
     plugins: [
-      vue(),
+      VueMacros({
+        plugins: {
+          vue: vue(),
+        },
+      }),
       DefineOptions(),
       viteMockServe({
         mockPath: 'mock',
