@@ -1,4 +1,4 @@
-import { Data } from './models/data.model'
+import type { Data } from './models/data.model'
 import { get } from '/@/utils/axios'
 
 export function GetDataApi() {
