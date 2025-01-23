@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 
-const useAppStore = defineStore({
-  id: 'app',
+const useAppStore = defineStore('app', {
   state: () => ({
     isOk: true,
     testNum: 1,
