@@ -21,6 +21,7 @@
     "vue-router": "^3.6.5"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^18.19.67",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -37,15 +38,16 @@
     "postcss": "^8.4.49",
     "prettier": "^2.8.8",
     "sass": "^1.82.0",
+    "tailwindcss": "^4.0.0",
     "terser": "^5.37.0",
     "typescript": "^5.7.2",
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-define-options": "^1.5.2",
-    "unplugin-vue-macros": "^2.13.5",
+    "unplugin-vue-macros": "^2.13.11",
     "vite": "^6.0.3",
     "vite-plugin-mock": "^2.9.8",
     "vue-eslint-parser": "^9.4.3",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.0"
   },
   "lint-staged": {
     "*.{vue,ts,tsx}": [

@@ -1,9 +1,9 @@
 <template>
-  <div class="page-layout">
+  <div class="h-screen w-full">
     <header-top></header-top>
-    <div class="container">
-      <side-bar class="left"></side-bar>
-      <div class="content">
+    <div class="main-container flex w-full bg-[#e9e9e9]">
+      <side-bar class="w-[15rem]"></side-bar>
+      <div class="flex-1 p-5 m-2.5 w-full bg-white box-border overflow-y-auto">
         <router-view></router-view>
       </div>
     </div>
@@ -22,22 +22,7 @@ const setTest = (v) => {
 provide('test', setTest)
 </script>
 <style lang="scss" scoped>
-.page-layout {
-  height: 100vh;
-}
-.container {
+.main-container {
   height: calc(100% - 50px);
-  display: flex;
-  background: #e9e9e9;
-  .left {
-    width: 240px;
-  }
-  .content {
-    flex: 1;
-    margin: 10px;
-    padding: 20px;
-    background: #fff;
-    box-sizing: border-box;
-  }
 }
 </style>

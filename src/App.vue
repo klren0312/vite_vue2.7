@@ -8,10 +8,4 @@ defineOptions({
   name: 'App',
 })
 </script>
-<style lang="scss">
-html,
-body {
-  margin: 0;
-  color: #323232;
-}
-</style>
+<style lang="scss"></style>

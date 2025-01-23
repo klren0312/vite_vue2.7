@@ -1,4 +1,4 @@
-import { splitVendorChunkPlugin, UserConfigExport, ConfigEnv } from 'vite'
+import { UserConfigExport, ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue2'
 import legacy from '@vitejs/plugin-legacy'
 import Components from 'unplugin-vue-components/vite'
@@ -7,6 +7,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 import path from 'path'
 import VueMacros from 'unplugin-vue-macros/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
   return {
@@ -31,7 +32,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
           setupProdMockServer();
         `,
       }),
-      splitVendorChunkPlugin(),
+      tailwindcss(),
       legacy({
         targets: ['defaults', 'ie >= 11'],
         modernPolyfills: true,

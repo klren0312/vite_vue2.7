@@ -1,6 +1,7 @@
 <template>
   <div class="side-bar">
     <el-menu
+      class="h-full"
       :default-active="onRoutes"
       background-color="#545c64"
       text-color="#fff"
@@ -42,10 +43,4 @@ const onRoutes = computed(() => {
   return useRoute().path
 })
 </script>
-<style lang="scss">
-.side-bar {
-  .el-menu {
-    height: 100%;
-  }
-}
-</style>
+<style lang="scss"></style>

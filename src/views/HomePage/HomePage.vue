@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="home-page w-full">
     <div class="test-text">isOk: {{ store.isOk }} - testNum: {{ testNum }}</div>
     <el-button type="primary" @click="changeStore">changeStore</el-button>
     <el-table v-loading="tableLoading" :data="tableData" style="width: 100%">
