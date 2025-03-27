@@ -44,7 +44,7 @@
     "unplugin-vue-components": "^0.22.12",
     "unplugin-vue-define-options": "^1.5.2",
     "unplugin-vue-macros": "^2.13.11",
-    "vite": "^6.0.3",
+    "vite": "^6.2.3",
     "vite-plugin-mock": "^2.9.8",
     "vue-eslint-parser": "^9.4.3",
     "vue-tsc": "^2.2.0"
@@ -52,6 +52,15 @@
   "lint-staged": {
     "*.{vue,ts,tsx}": [
       "eslint --ext .ts,.vue src"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "core-js",
+      "esbuild",
+      "vue-demi",
+      "vue-echarts"
     ]
   }
 }
